@@ -6,11 +6,14 @@ from typing import Callable, List
 
 
 class LLLML:
-    __slots__ = ["script", "model_call"]
+    __slots__ = ["script", "tests", "model_call"]
 
     def __init__(self, template: str, model_call: Callable[[str], str]) -> None:
         self.script = template
         self.model_call = model_call
+
+    def add_tests(self, tests: List[str]):
+        self.tests = tests
 
     def compile(self, **kwargs) -> str:
         """
