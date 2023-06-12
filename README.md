@@ -4,7 +4,7 @@ This is meant to be a markup language for interacting with LLM models, similar t
 
 Core features currently include:
 * Variables!
-    * These can be from a user supplied dictionary or special variables like: `$1`
+    * These can be from a user supplied dictionary or special variables like: `$1`, previous inputs
 * Control flow!
 
 
@@ -30,12 +30,11 @@ The script could be called like so:
 ```py
 compile(llmml, llm_call, {
     "MOVIE_ADJECTIVE": "worst",
-    "ANALYSIS_DETAILS": ["themes", "characters", "music"]
+    "ANALYSIS_DETAILS": "themes, character, and music"
 })
 ```
 
-* `lmmml` is a `lmmml` object
-    * Don't worry; this function just requires a string from the file to be constructed
+* `scipt` is a `string`
 * `llm_call` is a `Callable` that returns a string from your LLM
 * The dictionary at the end is used for other variables.
 
