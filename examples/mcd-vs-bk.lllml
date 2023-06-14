@@ -1,0 +1,8 @@
+# You can write comments like this! All blank lines are ignored.
+> Who would win in a fight: Ronald McDonald or The Burger King? Just give me the response; do not provide justification.
+
+! if 'King' in $1
+> McDonald's has the best fries though. How does the Burger King respond?
+! else
+> Burger King has great onion rings though. How does Ronald respond?
+! endif
