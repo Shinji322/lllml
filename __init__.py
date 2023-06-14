@@ -22,7 +22,7 @@ class LLLML:
         ### REGEXES FOR PARSING
         PAT_COMMENTS = r"(?:#.*|^$)"
         PAT_PROMPT = r"^>\s*(.+)$"
-        PAT_VARIABLES = r"(?<!\\)\$([\w_]+)"
+        PAT_VARIABLES = r"(?<!\\){{([\w_]+)}}"
         PAT_BANG = r"^!.*"
         PAT_IF = f"^! if '(.*)' in {PAT_VARIABLES}"
         PAT_ELIF = f"^! elif '(.*)' in {PAT_VARIABLES}"
