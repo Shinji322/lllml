@@ -45,7 +45,7 @@ class LLLML:
                     raise ValueError(
                         f"Variable '{match}' has no value in the 'values' dictionary."
                     )
-                string = re.sub(rf"\${match}", values[match], string)
+                string = re.sub("{{" + f"{match}" + "}}", values[match], string)
             return string
 
         def _llm_call(arg: str):
